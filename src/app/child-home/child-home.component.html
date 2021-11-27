@@ -1,0 +1,87 @@
+<ion-content>
+  <div class="child-index">
+    <!-- 轮播广告 -->
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="../assets/banner1.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="../assets/banner2.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="../assets/banner3.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="../assets/banner4.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+    <!-- 品类 -->
+      <ion-tab-bar class="ion-tab-bar">
+        <ion-tab-button>
+          <img src="../assets/alipay.png">
+          <ion-label>Photo</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <img src="../assets/apple.png">
+          <ion-label>else</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <img src="../assets/alipay.png">
+          <ion-label>Photo</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <img src="../assets/apple.png">
+          <ion-label>else</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    
+        
+    <!-- 砍价、团购、折扣 -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size='5'>
+          <img class='img-kj' src="../assets/kj.png" alt="">
+        </ion-col>
+        <ion-col size="7">
+          <ion-row>
+            <img class='img-tg' src="../assets/tg.png" alt="">
+          </ion-row>
+          <ion-row>
+            <img class='img-zk' src="../assets/zk.png" alt="">
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!-- 新品上市 -->  
+  <ion-item button (click)="buttonClick()" detail>
+    <img style="height: 40px;margin-right: 10px;" src="../assets/logo.png">
+    <ion-label>
+      新品上市
+      <br>
+      New products Listed
+    </ion-label>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of newItems">
+        <ion-card>
+          <img [src]='item.picture' />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Madison, WI</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between 
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  
+
+  
+  
+  
+
+</ion-content>
